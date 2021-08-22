@@ -21,7 +21,10 @@ const FlashCard = ({ flashcard }) => {
                     <p className="text-3xl p-0 text-grey-dark">&bull;</p>
                   </div>
                   <div className="w-4/5 h-10 py-3 px-1">
-                    <p className="hover:text-blue-dark">{option}</p>
+                    <p
+                      className="hover:text-blue-dark"
+                      dangerouslySetInnerHTML={{ __html: option }}
+                    ></p>
                   </div>
                   {option === flashcard.answer && answerPressed && (
                     <div className="w-8 h-10 text-center py-1">
